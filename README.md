@@ -27,3 +27,27 @@ $ docker run -dit --rm --name portfolio1 -v "$PWD/public":/usr/local/apache2/htd
 ```sh
 $ docker stop portfolio1
 ```
+
+## indexで雛形作成
+
+！と入力してenterすると雛形が作成できる
+
+##　ショートカットキー
+
+command+A　全て選択
+command+S　上書き保存
+：いろんな知識を学んで、それを使えるようになるのが気持ちいい
+
+##　知識
+
+検索「DOCTYPE html」 (opens new window)
+検索「meta charset UTF-8」 (opens new window)
+検索「X-UA-Compatible」 (opens new window)
+検索「meta viewport」 (opens new window) 重要
+
+## CSSでできること
+・フォントを変える
+　Googleフォントからインポートする
+・ボタンのデザインを変える
+　cssのデフォルトデザインがダサいらしい
+文章の揃え方や間隔も変えられる
