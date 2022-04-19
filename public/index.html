@@ -5,7 +5,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="robots" content="noindexx">
   <title>ゆみさんのポートフォリオ</title>
-  <link rel="stylesheet" href="http://localhost:3000/assets/main.css" />
+  <link 
+   rel="stylesheet" 
+   href="http://localhost:3000/assets/main.css" 
+  />
+  <link 
+   rel="stylesheet" 
+   href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+  />
 </head>
 <body>
   <img src="./assets/decorations/lt.svg" 
@@ -28,14 +35,134 @@
       <div class="card-contents">内容</div>
     </div>
 
+    <div style="height: 20px"></div>
+
+    <div class="card-cover bg-white">
+      <h2 class="card-title-cover bg-2 text-light">
+        <div class="card-title">Self-Introduction</div>
+        <div class="card-subtitle">自己紹介</div> 
+        <div class="card-title-line"></div>
+      </h2>
+      <div class="card-contents">
+        <div class="card-basic-info-layout">
+          <div>
+            <img src="./assets/me.png" alt="顔写真" class="my-photo" />
+
+          </div>
+          <div style="flex-grow: 1">
+           <div style="display: flex; gap: 1em; align-items: flex-end">
+            <h3 style="margin: 0; font-size: 2rem;">高柳 亮</h3>
+            <span style="padding-bottom: 4px;">たかやなぎ りょう</span>
+          </div>
+          <div class="bg-2" style="height: 2pw;"></div>
+          <div class="text-2" style="font-size: 0.95rem">Ryo Takayanagi</div>
+          
+          <div
+           class="text-1"
+           style="display: flex; gap: 0.5em; align-items: center;"
+           >
+            <img src="./assets/icons/email.svg" alt="Emailのアイコン">
+            <span>su-yumi-public[at]email.example.com</span>
+          </div>
+
+          <div>同志社大学　商学部　商学科　4　年生</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-contents">
+      <span class="card-basic-info-label bg-1 text-light">自己紹介</span>
+      <p>
+        初めまして、高柳亮
+        と言います。このサイトでは私の趣味やスキルなどを紹介するポートフォリオです。
+        このポートフォリオが、webでの初めての制作物です。どうぞご覧ください
+      </p>  
+      <span class="card-basic-info-label bg-1 text-light">重要</span>
+      <p>このページはweb制作の学習のためのページです。掲載されている情報はほとんど架空の設定であり、実際とは異なります。
+        また、プロフィールの画像は、<a href="https://www.photo-ac.com/">写真AC</a> の AI Generator
+        で生成した架空の人物です。
+      </p>
+    </div>
+
+    <div style="height: 20px"></div>
+
+      <div class="card-cover bg-white">
+        <h2 class="card-title-cover bg-2 text-light">
+          <div class="card-title">Hobby</div>
+          <div class="card-subtitle">趣味</div>
+          <div class="card-title-line"></div>
+        </h2>
+        <div class="card-contents">
+          　旅行と写真を取ることが趣味です。スマートフォンで気軽に撮影したものです。
+          パノラマ撮影が気に入っています。
+        </div>
+        <div
+          class="swiper-area"
+          style="
+            --swiper-navigation-color: #fff;
+            --swiper-pagination-color: #fff;
+          "
+        >
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="swiper-title">静岡県 熱海市 熱海城前</div>
+              <img src="./assets/photos/1.jpg" alt="静岡県 熱海市 熱海城前" />
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-title">夕方の大学</div>
+              <img
+                src="./assets/photos/2.jpg"
+                alt="夕方の大学"
+                style="width: auto"
+              />
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-title">高知県 四万十川 沈下橋</div>
+              <img src="./assets/photos/3.jpg" alt="高知県 四万十川 沈下橋" />
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-title">石川県 能登半島 聖域の岬</div>
+              <img src="./assets/photos/4.jpg" alt="石川県 能登半島 聖域の岬" />
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-title">長野県 軽井沢町 白糸の滝</div>
+              <img src="./assets/photos/5.jpg" alt="長野県 軽井沢町 白糸の滝" />
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-title">新潟県 糸魚川 白馬大仏前</div>
+              <img src="./assets/photos/6.jpg" alt="新潟県 糸魚川 白馬大仏前" />
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+
+
+
+
+
     <div style="height: 40px"></div>
     <footer class="footer-cover bg-2 text-light">
       <div style="height: 4px; background-color: rgba(0, 0, 0, 0.1)"></div>
       <div class="footer-contents">&copy; Yumi's web page.</div>
     </footer>
   </div>
-
-
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script>
+     var swiper = new Swiper(".swiper-area", {
+        direction: "horizontal",
+        spaceBetween: 30,
+        autoplay: { delay: 10 * 1000, disableOnInteraction: false },
+        loop: true,
+        pagination: { el: ".swiper-pagination" },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+  </script>
 </body>
 </html>
+
 
