@@ -314,8 +314,8 @@ a:hover {
   gap: 0 6px;
 }
 .app-bar .app-bar-button-cover {
-    grid-template-columns: repeat(4, 1fr);
-  }
+  grid-template-columns: repeat(4, 1fr);
+}
 @media screen and (min-width: 600px) {
   .app-bar .app-bar-button-cover {
     grid-template-columns: repeat(6, 1fr);
